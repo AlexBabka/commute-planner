@@ -17,13 +17,17 @@ public class OpenWeatherClient {
         this.openWeatherConnectionProperties = openWeatherConnectionProperties;
     }
 
-    public WeatherDetails getCurrentWeather() {
+    public WeatherDetails getCurrentWeather(String cityId) {
         String apiUrl = openWeatherConnectionProperties.getApiUrl();
+        String apiKey = openWeatherConnectionProperties.getApiKey();
+
+        // TODO make configurable
+        String measurementUnit = "metric";
 
         UriComponents url = UriComponentsBuilder.fromHttpUrl(apiUrl)
-                .queryParam("id", "2759794")
-                .queryParam("units", "metric")
-                .queryParam("APPID", openWeatherConnectionProperties.getApiKey())
+                .queryParam("id", cityId)
+                .queryParam("units", measurementUnit)
+                .queryParam("APPID", apiKey)
                 .build();
 
         return restTemplate.getForObject(url.toUri(), WeatherDetails.class);

@@ -13,6 +13,6 @@ public class WeatherService {
     }
 
     public WeatherDetails getCurrentWeather() {
-        return openWeatherClient.getCurrentWeather();
+        return openWeatherClient.getCurrentWeather("2759794");
     }
 }
