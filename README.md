@@ -1,5 +1,5 @@
 # Commute Planner 
-Backend application exposing information to plan your commute via Rest API.
+Backend application exposing REST API with information to plan your commute.
 It is implemented with Spring Boot 2 and Java 8
 
 # Prerequisites
@@ -8,5 +8,5 @@ It is implemented with Spring Boot 2 and Java 8
 
 # How to run application
 - mvn springboot:run
-- Open http://localhost:10000/api/v1/weather
+- Open in browser: http://localhost:10000/api/v1/weather or http://localhost:10000/api/v1/train-stations
 
