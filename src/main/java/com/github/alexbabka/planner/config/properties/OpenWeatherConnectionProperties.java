@@ -3,25 +3,25 @@ package com.github.alexbabka.planner.config.properties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties("openweather.connection")
+@ConfigurationProperties("openweather.connection.api")
 @Component
 public class OpenWeatherConnectionProperties {
-    private String apiUrl;
-    private String apiKey;
+    private String url;
+    private String secretKey;
 
-    public String getApiUrl() {
-        return apiUrl;
+    public String getUrl() {
+        return url;
     }
 
-    public void setApiUrl(String apiUrl) {
-        this.apiUrl = apiUrl;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public String getApiKey() {
-        return apiKey;
+    public String getSecretKey() {
+        return secretKey;
     }
 
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
     }
 }

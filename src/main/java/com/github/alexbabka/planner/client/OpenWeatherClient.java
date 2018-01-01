@@ -18,8 +18,8 @@ public class OpenWeatherClient {
     }
 
     public WeatherDetails getCurrentWeather(String cityId) {
-        String apiUrl = openWeatherConnectionProperties.getApiUrl();
-        String apiKey = openWeatherConnectionProperties.getApiKey();
+        String apiUrl = openWeatherConnectionProperties.getUrl();
+        String apiKey = openWeatherConnectionProperties.getSecretKey();
 
         // TODO make configurable
         String measurementUnit = "metric";

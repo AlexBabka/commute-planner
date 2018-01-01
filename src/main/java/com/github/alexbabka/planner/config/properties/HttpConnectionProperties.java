@@ -3,9 +3,9 @@ package com.github.alexbabka.planner.config.properties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "openweather.connection.http")
+@ConfigurationProperties(prefix = "http.connection")
 @Component
-public class RestConnectionProperties {
+public class HttpConnectionProperties {
     private int maxTotal;
     private int maxPerRoute;
     private int requestTimeout;
