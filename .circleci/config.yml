@@ -19,6 +19,7 @@ jobs:
       DOCKER_TLS_VERIFY: 1
 
     steps:
+      - setup_remote_docker
       - checkout
 
       # Download and cache dependencies
