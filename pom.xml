@@ -98,6 +98,8 @@
                             </execution>
                         </executions>
                         <configuration>
+                            <username>alexbabka</username>
+                            <password>421Kgd90</password>
                             <repository>alexbabka/projects</repository>
                             <tag>${project.version}</tag>
                             <buildArgs>
