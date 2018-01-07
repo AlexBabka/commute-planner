@@ -37,5 +37,6 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run build
-      - run: mvn clean deploy -Pdocker
+      - run: mvn clean package -Pdocker
+      - run: mvn dockerfile:push -Pdocker
 
