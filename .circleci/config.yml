@@ -5,9 +5,9 @@
 version: 2
 jobs:
   build:
-     docker:
-       # specify the version you desire here
-       - image: circleci/openjdk:8-jdk
+    docker:
+      # specify the version you desire here
+      - image: circleci/openjdk:8-jdk
 
     working_directory: ~/repo
 
@@ -25,13 +25,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: mvn clean deploy -Pdocker
+      - run: mvn dependency:go-offline
 
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
-      # run tests!
-      - run: mvn integration-test
+      # run build
+      - run: mvn clean install -Pdocker
 
