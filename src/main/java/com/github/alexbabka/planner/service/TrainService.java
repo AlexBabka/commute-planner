@@ -1,7 +1,8 @@
 package com.github.alexbabka.planner.service;
 
-import com.github.alexbabka.planner.client.TrainInformationClient;
+import com.github.alexbabka.planner.client.train.TrainInformationClient;
 import com.github.alexbabka.planner.model.TrainStation;
+import com.github.alexbabka.planner.model.TravelOption;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,5 +17,9 @@ public class TrainService {
 
     public List<TrainStation> findAllStations() {
         return trainInformationClient.retrieveAllTrainStations();
+    }
+
+    public List<TravelOption> getTravelAdvice(String fromStation, String toStation) {
+        return trainInformationClient.retrieveTravelAdvice(fromStation, toStation);
     }
 }
