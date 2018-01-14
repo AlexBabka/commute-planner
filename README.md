@@ -7,6 +7,6 @@ It is implemented with Spring Boot 2 and Java 8
 - Install maven 3+
 
 # How to run application
-- mvn springboot:run
+- mvn spring-boot:run
 - Open in browser: http://localhost:10000/api/v1/weather or http://localhost:10000/api/v1/train-stations
 
